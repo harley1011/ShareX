@@ -1776,7 +1776,7 @@ namespace ShareX
         public void CaptureScreenshot(CaptureType captureType, TaskSettings taskSettings = null, bool autoHideForm = true)
         {
             if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
-            CaptureFactory.getInstance().getStrategy(captureType, this).capture(captureType, taskSettings, autoHideForm);
+            CaptureFactory.getInstance().GetStrategy(captureType, this).Capture(captureType, taskSettings, autoHideForm);
         }
 
         private void DoCapture(ScreenCaptureDelegate capture, CaptureType captureType, TaskSettings taskSettings = null, bool autoHideForm = true)
@@ -1864,7 +1864,6 @@ namespace ShareX
             return captureType.HasFlagAny(CaptureType.RectangleWindow, CaptureType.Rectangle, CaptureType.Polygon, CaptureType.Freehand, CaptureType.LastRegion);
         }
 
-
         private void CaptureWindow(IntPtr handle, TaskSettings taskSettings = null, bool autoHideForm = true)
         {
             if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
@@ -1889,7 +1888,6 @@ namespace ShareX
                 return Screenshot.CaptureWindow(handle);
             }, CaptureType.Window, taskSettings, autoHideForm);
         }
-
 
         private void CaptureRectangleAnnotate(TaskSettings taskSettings = null, bool autoHideForm = true)
         {

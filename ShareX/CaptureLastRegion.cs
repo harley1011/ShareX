@@ -15,7 +15,7 @@ namespace ShareX
             : base(mainForm)
         { }
 
-        public override void capture(CaptureType captureType, TaskSettings taskSettings, bool autoHideForm = true)
+        public override void Capture(CaptureType captureType, TaskSettings taskSettings, bool autoHideForm = true)
         {
             switch (lastRegionCaptureType)
             {
@@ -33,7 +33,7 @@ namespace ShareX
                     else
                     {
                         CaptureStrategy captureRegion = new CaptureRegion(mainForm);
-                        captureRegion.capture(CaptureType.Rectangle, taskSettings, autoHideForm);
+                        captureRegion.Capture(CaptureType.Rectangle, taskSettings, autoHideForm);
                     }
                     break;
                 case LastRegionCaptureType.Light:

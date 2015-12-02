@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace ShareX
 {
-    class CaptureActiveWindow : CaptureStrategy
+    internal class CaptureActiveWindow : CaptureStrategy
     {
         public CaptureActiveWindow(MainForm mainForm)
             : base(mainForm)
         { }
 
-        public override void capture(CaptureType captureType, TaskSettings taskSettings, bool autoHideForm = true)
+        public override void Capture(CaptureType captureType, TaskSettings taskSettings, bool autoHideForm = true)
         {
             DoCapture(() =>
             {
@@ -50,6 +50,5 @@ namespace ShareX
                 return img;
             }, CaptureType.ActiveWindow, taskSettings, autoHideForm);
         }
-
     }
 }
